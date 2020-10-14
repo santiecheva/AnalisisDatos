@@ -1,7 +1,10 @@
 import sqlite3
 import pandas as pd
-
+import matplotlib.pyplot as plt
 from sqlite3 import Error
+from sklearn.datasets import *
+
+
 def sql_connection():
 
     try:
@@ -27,7 +30,10 @@ def sql_table(con):
 
     con.commit()
 
-    print(df_train)
+    print('de la tabla train: \n %s' % df_train.isnull().sum())   
+    print('de la tabla train: \n %s' % df_train.isnull().sum())   
+
+
 
 con = sql_connection()
 
